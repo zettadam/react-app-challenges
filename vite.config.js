@@ -1,11 +1,18 @@
-import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 
-// https://vitejs.dev/config/
-const config = defineConfig({
-  plugins: [
-    reactRefresh()
-  ]
-})
+/**
+ * @type {import('vite').UserConfig}
+ */
+const config = (opts) => {
+
+  return {
+    server: {
+      open: 'http://localhost:3000'
+    },
+    plugins: [
+      reactRefresh()
+    ]
+  }
+}
 
 export default config

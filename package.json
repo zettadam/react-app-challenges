@@ -3,7 +3,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite serve"
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
