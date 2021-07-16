@@ -1,7 +1,7 @@
 # react-app-challenges
 
 ## To-Do:
-- [ ] Making REST API requests
+- [ ] Making REST API requests (react-query)
 - [ ] Refreshing application data with API requests
 
 ## Done:

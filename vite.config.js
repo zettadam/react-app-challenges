@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 
 /**
@@ -6,12 +7,14 @@ import reactRefresh from '@vitejs/plugin-react-refresh'
 const config = (opts) => {
 
   return {
-    server: {
-      open: 'http://localhost:3000'
-    },
     plugins: [
       reactRefresh()
-    ]
+    ],
+    resolve: {
+      alias: {
+        '~': resolve(__dirname, 'src')
+      }
+    }
   }
 }
 

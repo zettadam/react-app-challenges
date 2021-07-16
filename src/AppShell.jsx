@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
@@ -8,6 +9,9 @@ import ScreenSwitchboard from './ScreenSwitchboard'
 import ModalManager from './ModalManager'
 
 import './app-shell.css'
+
+
+const queryClient = new QueryClient()
 
 
 const AppShell = () => {
@@ -24,14 +28,16 @@ const AppShell = () => {
   }
 
   return (
-    <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
       <div className="app--shell" onClick={openModal}>
-        <AppHeader />
-        <ScreenSwitchboard />
-        <ModalManager closeFn={closeModal} modal={modalOpen} />
-        <AppFooter />
+        <BrowserRouter>
+          <AppHeader />
+          <ScreenSwitchboard />
+          <ModalManager closeFn={closeModal} modal={modalOpen} />
+          <AppFooter />
+        </BrowserRouter>
       </div>
-    </BrowserRouter>
+    </QueryClientProvider>
   )
 }
 

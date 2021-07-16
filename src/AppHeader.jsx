@@ -7,7 +7,7 @@ const AppHeader = () => {
     <header className="app--header">
       <h1>React App Challenges</h1>
       <nav className="app--nav">
-        <NavLink to="/screen-one">Screen One</NavLink>
+        <NavLink to="/games">Games</NavLink>
         <NavLink to="/screen-two">Screen Two</NavLink>
         <NavLink to="/screen-three">Screen Three</NavLink>
       </nav>
